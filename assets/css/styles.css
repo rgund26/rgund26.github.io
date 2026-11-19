@@ -17,3 +17,7 @@
 @media(min-width:1200px){.has-section-nav main,.has-section-nav footer{width:calc(100% - 280px);margin-left:auto;margin-right:260px}.section-nav{position:fixed;right:24px;top:132px;width:200px;margin:0;padding:0;border:0;max-height:calc(100dvh - 165px);overflow-y:auto;z-index:5}.section-nav-title{display:block;font:500 .8rem var(--font-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--accent-green-text);margin:0 0 18px 14px}.section-nav-toggle{display:none}.section-nav ul{display:block;padding:0}.section-nav a{padding:9px 12px}}
 @media(min-width:1600px){.has-section-nav main,.has-section-nav footer{margin-right:auto}.section-nav{right:max(24px,calc((100vw - 1580px)/2))}}
 @media print{.section-nav{display:none}.has-section-nav main,.has-section-nav footer{width:auto;margin:auto}}
+
+/* Caption sits in the blank lower-left area of the report-book cover. */
+.story-cover{position:relative}.story-cover figcaption{position:absolute;left:2.5%;bottom:5%;padding:0;border:0;background:transparent;font-size:.875rem;line-height:1.4;color:var(--ink-secondary);pointer-events:none}.story-cover figcaption span{font-size:.8rem;color:var(--accent-green-text)}
+@media(max-width:680px){.story-cover figcaption{bottom:3%;font-size:.75rem;line-height:1.25}.story-cover figcaption span{font-size:.75rem}}

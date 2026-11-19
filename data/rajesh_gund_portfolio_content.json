@@ -109,20 +109,34 @@
       ],
       "media": {
         "diagram": "assets/diagrams/pest-trap-architecture.jpg",
-        "video_poster_placeholder": "assets/posters/pest-trap-demo.webp",
-        "photo_placeholders": [
-          "assets/img/pest-trap-robot-01.webp",
-          "assets/img/pest-trap-robot-02.webp",
-          "assets/img/pest-trap-cad-01.webp"
-        ]
+        "cover": "assets/img/pest-trap-robot/mmpt-cover.webp",
+        "video": "assets/video/pest-trap-robot/mmpt-demo.mp4",
+        "video_poster": "assets/posters/pest-trap-robot/mmpt-demo.webp",
+        "perception_clips": [
+          {
+            "video": "assets/video/pest-trap-robot/mmpt-trap-detection.mp4",
+            "poster": "assets/posters/pest-trap-robot/mmpt-trap-detection.webp",
+            "gif": "assets/video/pest-trap-robot/mmpt-trap-detection.gif"
+          },
+          {
+            "video": "assets/video/pest-trap-robot/mmpt-grasp-points.mp4",
+            "poster": "assets/posters/pest-trap-robot/mmpt-grasp-points.webp",
+            "gif": "assets/video/pest-trap-robot/mmpt-grasp-points.gif"
+          }
+        ],
+        "photos": [
+          "assets/img/pest-trap-robot/mmpt-front.webp",
+          "assets/img/pest-trap-robot/mmpt-rear.webp"
+        ],
+        "cad": "assets/img/pest-trap-robot/mmpt-cad-isometric.webp"
       }
     },
     {
       "id": "ghg-sensor",
       "slug": "/projects/ghg-sensor/",
-      "title": "GHG — In-Chamber Soil-Respiration CO₂ Sensor",
+      "title": "Wireless CO₂ Soil-Respiration Sensor",
       "subtitle": "Development and Validation of a Wireless and Low-Cost In-Chamber CO₂ Sensor for Measuring Real-Time Soil Respiration",
-      "status_badge": "Hardware developed · Validation underway",
+      "status_badge": "Two prototypes built · Validation underway",
       "institution": "University of Tennessee, Knoxville",
       "funding": "National Science Foundation (NSF)",
       "presentation": "ASABE 2026 Poster",
@@ -142,10 +156,12 @@
         "base_station": "Raspberry Pi 5 local data logger and real-time Web App server (live trend plots, historical date filter, CSV download; no internet gateway or cloud fees)"
       },
       "completed_work": [
-        "Custom PCB integrating Sensirion SCD-30 and XIAO ESP32-C3",
+        "First prototype built on perfboard in a rectangular mesh enclosure sized for field chambers",
+        "Custom PCB designed in KiCad, assembled and debugged with a Sensirion SCD30 and XIAO ESP32-C3",
         "3D-printed PETG threaded capsule enclosure with ePTFE moisture barrier",
-        "20-day deep-sleep power architecture (1 hr interval, 55 min deep sleep)",
+        "About 20 days of battery runtime at hourly sampling and 55 minutes of deep sleep per cycle",
         "Multi-node Wi-Fi to LoRa telemetry pipeline and Raspberry Pi 5 local real-time Web App with CSV export",
+        "Browser-based device configuration for sampling intervals, Wi-Fi setup and wireless CO₂ calibration",
         "Dual-use form factor compatible with field chambers and laboratory incubation jars"
       ],
       "planned_work": [
@@ -153,13 +169,10 @@
         "Field evaluation across chamber deployments"
       ],
       "media": {
-        "diagram": "assets/diagrams/ghg-pipeline.svg",
-        "video_poster_placeholder": "assets/posters/ghg-demo.webp",
-        "photo_placeholders": [
-          "assets/img/ghg-enclosure.webp",
-          "assets/img/ghg-pcb.webp",
-          "assets/img/ghg-calibration-plot.webp"
-        ]
+        "cover": "assets/img/ghg-sensor/compact-sensor.webp",
+        "first_prototype": "assets/img/ghg-sensor/first-prototype.webp",
+        "pcb_layout": "assets/img/ghg-sensor/kicad-pcb.webp",
+        "device_dashboard": "assets/img/ghg-sensor/device-dashboard.webp"
       },
       "validation_update": "Initial GC comparison and response-time tests completed; soil-incubation testing planned."
     }

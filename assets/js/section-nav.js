@@ -7,8 +7,8 @@
     '/experience/': ['University of Tennessee', 'CSIR–CMERI', 'SKUAST-K', 'Barnstorm Agtech', 'IIT Bombay', 'Industry training', 'Certifications', 'Contact'],
     '/publications/': ['Digital twin review', 'SRI nursery research', 'Research interests', 'Contact'],
     '/projects/': ['Pest trap service robot', 'CO₂ sensor', 'Rice transplanting', 'Precision agriculture', 'Tractor linkage', 'Litchi decorticator', 'Contact'],
-    '/projects/pest-trap-robot/': ['The problem', 'My contribution', 'Perception pipeline', 'Progress & next steps', 'Photos & videos', 'Related project'],
-    '/projects/ghg-sensor/': ['The problem', 'My contribution', 'System design', 'Validation', 'Photos & videos', 'Related project'],
+    '/projects/pest-trap-robot/': ['Photos & videos', 'The problem', 'My contribution', 'Perception pipeline', 'Progress & next steps', 'Related project'],
+    '/projects/ghg-sensor/': ['Hardware iterations', 'KiCad & power', 'Device web app', 'Testing', 'Related project'],
     '/projects/earlier-work/': ['Rice transplanting', 'Precision agriculture', 'Tractor linkage', 'Litchi decorticator', 'Industry training', 'Engineering tools']
   };
   const path = location.pathname.replace(/index\.html$/, '');

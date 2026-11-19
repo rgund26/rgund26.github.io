@@ -28,3 +28,169 @@
 @media(max-width:680px){.story-cover figcaption{padding:4px 7px;bottom:2%;font-size:.75rem;line-height:1.2}.story-cover figcaption span{font-size:.75rem}}
 
 .personal-opener{padding-top:38px}.personal-opener>.eyebrow{text-align:center}.personal-opener .opening-story{max-width:805px;margin:0 auto 24px;font-family:var(--font-display);font-size:clamp(1.25rem,2.1vw,1.75rem);line-height:1.6;color:var(--accent-green-text)}.personal-opener>.lead{max-width:805px;margin:0 auto;font-size:1.1rem}
+
+.card-media.mmpt-card-cover,
+.directory-media.mmpt-card-cover {
+  padding: 0;
+  overflow: hidden;
+}
+
+.mmpt-card-cover img {
+  object-fit: cover;
+  object-position: center 58%;
+  mix-blend-mode: normal;
+}
+
+.mmpt-hero {
+  display: grid;
+  gap: 20px;
+}
+
+.mmpt-hero h1 {
+  font-size: clamp(2.6rem, 4.2vw, 4.2rem);
+  margin-bottom: 0;
+}
+
+.mmpt-hero-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.mmpt-hero-media {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.mmpt-cad {
+  margin: 0;
+}
+
+.mmpt-cad .zoom {
+  background: white;
+}
+
+.mmpt-cad .zoom img {
+  aspect-ratio: 16 / 9;
+}
+
+.mmpt-media {
+  padding-top: clamp(36px, 5vw, 64px);
+}
+
+.mmpt-media .section-heading h2 {
+  margin-bottom: 8px;
+}
+
+.mmpt-media .media-video {
+  height: auto;
+}
+
+.mmpt-clips,
+.mmpt-gallery {
+  display: grid;
+  gap: 16px;
+}
+
+.mmpt-clips .media-video {
+  aspect-ratio: 8 / 3;
+}
+
+.mmpt-clips .diagram,
+.mmpt-gallery .diagram {
+  margin: 0;
+}
+
+.mmpt-clips figcaption p {
+  margin: 4px 0 8px;
+}
+
+.mmpt-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.mmpt-drive-demo {
+  grid-column: span 2;
+}
+
+.mmpt-gallery .zoom img {
+  aspect-ratio: 8 / 9;
+}
+
+@media (min-width: 681px) {
+  .mmpt-clips {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mmpt-gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .mmpt-hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "title media" "summary media";
+    column-gap: 28px;
+  }
+
+  .mmpt-hero-title {
+    grid-area: title;
+  }
+
+  .mmpt-hero-media {
+    grid-area: media;
+    align-self: start;
+  }
+
+  .mmpt-hero-summary {
+    grid-area: summary;
+  }
+}
+
+.ghg-layout {
+  display: grid;
+  align-items: center;
+  gap: 24px;
+}
+
+.ghg-layout .diagram {
+  margin: 0;
+}
+
+.ghg-layout .zoom {
+  background: white;
+}
+
+.section.ghg-layout,
+.ghg-validation {
+  padding-block: clamp(36px, 5vw, 64px);
+}
+
+.ghg-validation .section-heading {
+  margin-bottom: 16px;
+}
+
+.card-media.ghg-card-cover,
+.directory-media.ghg-card-cover {
+  padding: 10px;
+  background: white;
+}
+
+.ghg-card-cover img {
+  mix-blend-mode: normal;
+}
+
+@media (min-width: 810px) {
+  .ghg-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-hero.ghg-layout h1 {
+    font-size: clamp(2.65rem, 4.4vw, 4.2rem);
+  }
+}

@@ -21,3 +21,8 @@
 /* Caption sits in the blank lower-left area of the report-book cover. */
 .story-cover{position:relative}.story-cover figcaption{position:absolute;left:2.5%;bottom:5%;padding:0;border:0;background:transparent;font-size:.875rem;line-height:1.4;color:var(--ink-secondary);pointer-events:none}.story-cover figcaption span{font-size:.8rem;color:var(--accent-green-text)}
 @media(max-width:680px){.story-cover figcaption{bottom:3%;font-size:.75rem;line-height:1.25}.story-cover figcaption span{font-size:.75rem}}
+
+/* High-contrast label over the grade-card cover. */
+.story-cover figcaption{padding:8px 12px;background:#173d29;color:#fff;border:1px solid #173d29;border-radius:3px;font-family:var(--font-body);font-weight:700;line-height:1.35;box-shadow:0 2px 6px #0002;bottom:4%}
+.story-cover figcaption span{color:#fff;font-weight:700}
+@media(max-width:680px){.story-cover figcaption{padding:4px 7px;bottom:2%;font-size:.75rem;line-height:1.2}.story-cover figcaption span{font-size:.75rem}}

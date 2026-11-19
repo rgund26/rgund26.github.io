@@ -3,7 +3,7 @@
   if (!headings.length) return;
   const labels = {
     '/': ['Featured projects', 'About me', 'Engineering skills', 'Experience', 'Education', 'Publications', 'Contact'],
-    '/about/': ['Profile', 'Engineering approach', 'Skills in practice', 'Education', 'Teaching & communication', 'Contact'],
+    '/about/': ['My story', 'Skills in practice', 'Education', 'Teaching & communication', 'Contact'],
     '/experience/': ['University of Tennessee', 'CSIR–CMERI', 'SKUAST-K', 'Barnstorm Agtech', 'IIT Bombay', 'Industry training', 'Certifications', 'Contact'],
     '/publications/': ['Digital twin review', 'SRI nursery research', 'Research interests', 'Contact'],
     '/projects/': ['Pest trap service robot', 'CO₂ sensor', 'Rice transplanting', 'Precision agriculture', 'Tractor linkage', 'Litchi decorticator', 'Contact'],

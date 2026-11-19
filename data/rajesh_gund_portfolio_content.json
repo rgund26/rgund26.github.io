@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "schema_version": "1.0.0",
+    "owner": "Rajesh Gund",
+    "target_deployment": "GitHub Pages (static HTML/CSS/vanilla JS)",
+    "privacy_rules": {
+      "exclude_phone": true,
+      "exclude_home_address": true,
+      "no_unconfirmed_work_authorization_claims": true,
+      "no_fabricated_metrics_or_fake_hardware_photos": true
+    }
+  },
+  "design_tokens": {
+    "colors": {
+      "bg_page": "#F8F7F4",
+      "bg_surface": "#FFFFFF",
+      "bg_tint_green": "#EEF3EF",
+      "bg_tint_copper": "#F5EFEA",
+      "border_hair": "#D5D9D4",
+      "ink_primary": "#1A1E1C",
+      "ink_secondary": "#333A36",
+      "ink_muted": "#4E5752",
+      "accent_green": "#2D5A3F",
+      "accent_green_text": "#1E442D",
+      "accent_copper": "#8C5327",
+      "accent_copper_text": "#6E3E18"
+    },
+    "typography": {
+      "display": "Plus Jakarta Sans",
+      "body": "Inter",
+      "mono": "IBM Plex Mono",
+      "body_size_px": 16,
+      "max_measure_ch": 66
+    }
+  },
+  "profile": {
+    "full_name": "Rajesh Gund",
+    "pronouns": "He/Him",
+    "location": "Knoxville, Tennessee, United States",
+    "hero_headline": "Rajesh Gund — Agricultural Robotics & Embedded Systems",
+    "hero_subheadline": "PhD student at the University of Tennessee, Knoxville, developing robotic and sensing systems for agricultural applications.",
+    "availability": "Open to engineering internships and full-time R&D roles in agricultural robotics, embedded systems, and precision sensing.",
+    "contact": {
+      "email": "rgund@vols.utk.edu",
+      "linkedin": "https://www.linkedin.com/in/rajeshgund/",
+      "researchgate": "https://www.researchgate.net/profile/Rajesh-Gund",
+      "resume_pdf": "assets/docs/Rajesh_Gund_Resume.pdf"
+    }
+  },
+  "featured_projects": [
+    {
+      "id": "pest-trap-robot",
+      "slug": "/projects/pest-trap-robot/",
+      "title": "Autonomous Pest Trap Service Robot",
+      "subtitle": "Deep Learning-Driven Insect Trap Detection & Mobile Manipulation for Large Food Storage Structures",
+      "status_badge": "Phase I Demonstrated · Phase II In Progress",
+      "institution": "University of Tennessee, Knoxville",
+      "collaborators": [
+        "Biosystems Engineering & Soil Science, University of Tennessee, Knoxville",
+        "USDA-ARS Center for Grain and Animal Health Research, Kansas"
+      ],
+      "funding": "USDA-NIFA Crop Protection and Pest Management Program (Award No. 2024-70006-42874)",
+      "presentation": "AI in Agriculture Conference Poster",
+      "problem_metrics": [
+        "$100B annual insect-driven losses in U.S. grain and food industries (USDA-ARS)",
+        "10,000+ sq. ft. warehouse floor areas requiring manual pest trap collection",
+        "Grain storage losses from insect infestation: 9% (developed nations) and 30% (developing nations)"
+      ],
+      "hardware": {
+        "chassis": "goBILDA Recon (low-profile differential-drive, 240mm x 240mm footprint, 40mm ground clearance, 600mm camera mast)",
+        "edge_compute": "NVIDIA Jetson Orin NX 8GB",
+        "vision_sensor": "Intel RealSense D455 (90° x 65° FOV, 0.6–6m range, downward eye-to-hand mount, RGB + Depth + IMU)"
+      },
+      "computer_vision": {
+        "model": "YOLOv8n-OBB (single-class 'trap' oriented bounding box detector)",
+        "io": "Input [x1, y1, x2, y2, x3, y3, x4, y4] -> Output [x, y, w, h, angle]",
+        "annotation_tool": "CVAT",
+        "dataset": {
+          "total_images": 584,
+          "train": 410,
+          "validation": 117,
+          "test": 57
+        },
+        "metrics": {
+          "best_checkpoint_epoch_144": {
+            "precision": 0.955,
+            "recall": 0.991,
+            "mAP50": 0.992,
+            "mAP50_95": 0.95
+          },
+          "final_checkpoint_epoch_184": {
+            "precision": 0.941,
+            "recall": 1.0,
+            "mAP50": 0.989,
+            "mAP50_95": 0.938
+          }
+        }
+      },
+      "demonstrated_phase_1": [
+        "Built low-profile differential-drive mobile robot integrating goBILDA Recon, Jetson Orin NX 8GB, and Intel RealSense D455",
+        "Curated and OBB-annotated 584 real-world trap images under varying lighting and complex backgrounds",
+        "Trained and benchmarked YOLOv8n-OBB detector for real-time edge deployment"
+      ],
+      "in_progress_phase_2": [
+        "Camera calibration for accurate grasping",
+        "Implementing ROS 2 framework across mobile platform and mobile manipulator",
+        "SLAM & navigation expansion with 2D LiDAR and Nav2 stack",
+        "Integrating 6-DOF robotic arm with dual-suction end-effector for trap manipulation"
+      ],
+      "media": {
+        "diagram": "assets/diagrams/pest-trap-architecture.jpg",
+        "video_poster_placeholder": "assets/posters/pest-trap-demo.webp",
+        "photo_placeholders": [
+          "assets/img/pest-trap-robot-01.webp",
+          "assets/img/pest-trap-robot-02.webp",
+          "assets/img/pest-trap-cad-01.webp"
+        ]
+      }
+    },
+    {
+      "id": "ghg-sensor",
+      "slug": "/projects/ghg-sensor/",
+      "title": "GHG — In-Chamber Soil-Respiration CO₂ Sensor",
+      "subtitle": "Development and Validation of a Wireless and Low-Cost In-Chamber CO₂ Sensor for Measuring Real-Time Soil Respiration",
+      "status_badge": "Hardware developed · Validation underway",
+      "institution": "University of Tennessee, Knoxville",
+      "funding": "National Science Foundation (NSF)",
+      "presentation": "ASABE 2026 Poster",
+      "hardware": {
+        "co2_sensor": "Sensirion SCD-30 (CO₂, Temperature, Relative Humidity)",
+        "mcu": "Seeed Studio XIAO ESP32-C3 on custom PCB",
+        "battery": "Ultralast UL1865-34-2P",
+        "enclosure": "3D-printed PETG two-section threaded capsule (no screws/fasteners)",
+        "filter": "ePTFE moisture-protection filter",
+        "dual_use": "Fits inside both field soil chambers and lab glass incubation jars",
+        "expandability": "Expandable framework for CH₄ and N₂O sensors"
+      },
+      "power_and_telemetry": {
+        "battery_runtime": "20 days",
+        "sampling_schedule": "1-hour sampling interval with 55 minutes of deep sleep",
+        "workflow": "Sensing nodes (CO₂, Temp, RH, timestamp) -> Local Wi-Fi -> Central Node (ESP32 + LoRa Tx) -> Long-Range LoRa -> LoRa Rx + Raspberry Pi 5 base station",
+        "base_station": "Raspberry Pi 5 local data logger and real-time Web App server (live trend plots, historical date filter, CSV download; no internet gateway or cloud fees)"
+      },
+      "completed_work": [
+        "Custom PCB integrating Sensirion SCD-30 and XIAO ESP32-C3",
+        "3D-printed PETG threaded capsule enclosure with ePTFE moisture barrier",
+        "20-day deep-sleep power architecture (1 hr interval, 55 min deep sleep)",
+        "Multi-node Wi-Fi to LoRa telemetry pipeline and Raspberry Pi 5 local real-time Web App with CSV export",
+        "Dual-use form factor compatible with field chambers and laboratory incubation jars"
+      ],
+      "planned_work": [
+        "Further GC reference comparisons and soil-incubation testing",
+        "Field evaluation across chamber deployments"
+      ],
+      "media": {
+        "diagram": "assets/diagrams/ghg-pipeline.svg",
+        "video_poster_placeholder": "assets/posters/ghg-demo.webp",
+        "photo_placeholders": [
+          "assets/img/ghg-enclosure.webp",
+          "assets/img/ghg-pcb.webp",
+          "assets/img/ghg-calibration-plot.webp"
+        ]
+      },
+      "validation_update": "Initial GC comparison and response-time tests completed; soil-incubation testing planned."
+    }
+  ],
+  "earlier_work": [
+    {
+      "title": "Computer Vision-Based Check-Row Rice Transplanting Control System (SRI Method)",
+      "organization": "Tamil Nadu Agricultural University (M.Tech. Thesis)",
+      "dates": "Sep 2021 – Sep 2023",
+      "summary": "Developed a computer-vision control system using YOLOv8 for check-row rice transplanting under the System of Rice Intensification (SRI). Companion published study evaluated 12 nursery tray configurations and identified 80 g seed density with 25 mm soil height as optimal (1–3 seedlings/pick, <1% missing hills).",
+      "diagram": "assets/diagrams/sri-control-loop.jpg"
+    },
+    {
+      "title": "Precision Agriculture & Autonomous Ground Vehicle Systems",
+      "organization": "CSIR–Central Mechanical Engineering Research Institute (CMERI), Ludhiana",
+      "role": "Project Associate",
+      "dates": "Jan 2024 – Oct 2024",
+      "summary": "Embedded programming, mechatronics, CAD, and sensor troubleshooting for a Digital Cone Penetrometer, Variable Rate Fertilizer (VRT) system, AGV navigation system, and field mapping with SoilOptix and GreenSeeker under Senior Principal Scientist Dr. Pradeep Rajan."
+    },
+    {
+      "title": "Autonomous Tractor Three-Point Linkage Design",
+      "organization": "Barnstorm Agtech, Inc.",
+      "role": "R&D Intern",
+      "dates": "Jul 2021 – Aug 2021",
+      "summary": "Designed a custom three-point linkage in SolidWorks for an autonomous farm tractor, conducting force analysis covering implement draft, traction force, and tractor center of gravity."
+    },
+    {
+      "title": "Design of Litchi Decorticator",
+      "organization": "Mahatma Phule Krishi Vidyapeeth, Rahuri (B.Tech. Project)",
+      "dates": "Jun 2017 – Sep 2021",
+      "summary": "Mechanical design of a litchi decorticator completed during undergraduate Agricultural Engineering studies."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Biosystems Engineering (Agricultural Robotics)",
+      "institution": "University of Tennessee, Knoxville",
+      "dates": "Jan 2025 – Present",
+      "status": "In Progress"
+    },
+    {
+      "degree": "M.Tech. in Agricultural Engineering (Farm Machinery & Power Engineering)",
+      "institution": "Tamil Nadu Agricultural University",
+      "dates": "Sep 2021 – Sep 2023",
+      "status": "Completed",
+      "thesis": "Development of Computer Vision-Based Rice Transplanting Control System for the System of Rice Intensification (SRI) Method (YOLOv8 check-row detection)"
+    },
+    {
+      "degree": "B.Tech. in Agricultural Engineering",
+      "institution": "Mahatma Phule Krishi Vidyapeeth, Rahuri",
+      "dates": "Jun 2017 – Sep 2021",
+      "status": "Completed",
+      "activities": [
+        "NSS"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "authors": "Gund, R., Badgujar, C. M., Samiappan, S., & Jagadamma, S.",
+      "year": 2025,
+      "title": "Application of Digital Twin Technology in Smart Agriculture: A Bibliometric Review",
+      "venue": "Agriculture, 15(17), 1799",
+      "doi": "10.3390/agriculture15171799",
+      "url": "https://www.mdpi.com/2077-0472/15/17/1799"
+    },
+    {
+      "authors": "Gund, R., Dhananchezhiyan, P., Kavitha, R., Surendrakumar, A., & Thirukumaran, K.",
+      "year": 2023,
+      "title": "Optimizing Nursery Trays for Minimizing Seedlings per Pick of Transplanter in SRI",
+      "venue": "International Journal of Environment and Climate Change, 13(10), 2813–2824",
+      "doi": "10.9734/ijecc/2023/v13i102946",
+      "url": "https://journalijecc.com/index.php/IJECC/article/view/2946"
+    }
+  ],
+  "skills_grouped": {
+    "Robotics & Control": [
+      "ROS / ROS 2 (in progress)",
+      "Mobile Manipulation",
+      "Differential-Drive Integration",
+      "AGV Navigation",
+      "Mechatronics",
+      "Control Systems"
+    ],
+    "Embedded Systems & Sensing": [
+      "Seeed XIAO ESP32-C3",
+      "Raspberry Pi 5",
+      "Arduino",
+      "Custom PCB Integration",
+      "Sensirion SCD-30",
+      "Intel RealSense D455",
+      "LoRa & Local Wi-Fi Telemetry",
+      "GPS",
+      "SoilOptix & GreenSeeker",
+      "Deep-Sleep Power Management"
+    ],
+    "Programming & Computer Vision": [
+      "Python",
+      "C++",
+      "Linux CLI",
+      "YOLOv8 / YOLOv8n-OBB",
+      "CVAT Annotation",
+      "Web Applications & Local Data Logging"
+    ],
+    "Mechanical Design": [
+      "SolidWorks",
+      "PTC Creo Parametric",
+      "AutoCAD",
+      "3D-Printed PETG Enclosures",
+      "Three-Point Linkage Force Analysis",
+      "CAD Fabrication & Machining"
+    ],
+    "Experimental Validation": [
+      "Field Mapping",
+      "GC Comparison & Response-Time Testing",
+      "Tractor & Implement Testing (CFMTTI/NERFMTTI)",
+      "SRI Nursery Trials",
+      "Analytical Instrumentation",
+      "Bibliometric Analysis"
+    ]
+  }
+}

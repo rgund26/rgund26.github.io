@@ -12,15 +12,15 @@
   });
   const modal = document.querySelector('#lightbox');
   let opener;
-  document.querySelectorAll('[data-lightbox]').forEach(button => {
-    button.addEventListener('click', () => {
-      opener = button;
-      const image = button.querySelector('img');
-      modal.querySelector('img').src = image.src;
-      modal.querySelector('img').alt = image.alt;
-      modal.querySelector('p').textContent = button.closest('figure').querySelector('figcaption').childNodes[0].textContent;
-      modal.showModal();
-    });
+  document.addEventListener('click', event => {
+    const button = event.target.closest('[data-lightbox]');
+    if (!button) return;
+    opener = button;
+    const image = button.querySelector('img');
+    modal.querySelector('img').src = image.src;
+    modal.querySelector('img').alt = image.alt;
+    modal.querySelector('p').textContent = button.closest('figure').querySelector('figcaption')?.textContent || image.alt;
+    modal.showModal();
   });
   modal.querySelector('.close').addEventListener('click', () => modal.close());
   modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });

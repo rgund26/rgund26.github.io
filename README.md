@@ -69,8 +69,30 @@ Replace every example path with real files. Do not commit large MP4/MOV files. N
 - No phone number, mailing address, or CPT/OPT eligibility claim is included.
 - The original screenshot-based CV is not published; a clean, text-based draft resume is provided instead.
 - Photos, videos and a portrait still need to be supplied. These are explicitly labeled draft placeholders, not fabricated media. Replace or remove unused placeholders before launch.
-- Publication links and bibliographic details were carried from supplied documents; external links were not independently checked during this build.
+- Publication records were checked against their journal pages during the profile expansion.
 
 ## Validation
 
-Four static pages; local links/assets checked; JavaScript syntax checked; desktop visual review; mobile layout at 390px iframe width (375px content width, no horizontal overflow); mobile menu open/close; project navigation; image lightbox open/Escape close. Native dialog handles keyboard focus containment and returns focus to its opener. This is targeted functional review, not an accessibility certification.
+Eight content pages plus a 404 page; local links/assets checked; JavaScript syntax checked; desktop visual review; mobile layout at 390px iframe width (375px content width, no horizontal overflow); mobile menu open/close; project navigation; image lightbox open/Escape close. Native dialog handles keyboard focus containment and returns focus to its opener. This is targeted functional review, not an accessibility certification.
+
+
+## Expanded profile
+
+Dedicated pages: `/about/`, `/experience/`, `/publications/`, and `/projects/`.
+The project directory filters six projects by discipline. Publications have journal/DOI links, copyable citations and a BibTeX download. A sitemap, robots.txt and 404 page support normal hosting behavior.
+
+## Media configuration
+
+Add image/video entries to `assets/js/media-config.js`. This config works without a server-side upload service. Put actual images/posters in the assets folders, and use hosted URLs for large videos. Existing placeholders remain until an entry is supplied. Supported types: image, video, youtube. YouTube uses a click-to-load privacy-enhanced iframe; no YouTube request occurs before activation unless you explicitly use a YouTube-hosted poster URL. Alt text and captions should describe the actual hardware/test.
+
+Slot identifiers:
+- pest-trap-robot-1: demonstration video
+- pest-trap-robot-2: mobile platform photo
+- pest-trap-robot-3: detector overlay
+- pest-trap-robot-4: arm/end-effector CAD
+- ghg-sensor-1: sensor/dashboard video
+- ghg-sensor-2: enclosure photo
+- ghg-sensor-3: PCB photo
+- ghg-sensor-4: reference comparison plot
+
+No actual prototype photographs or videos have been supplied. Initials stand in for a portrait; no fictional person or hardware is shown. Source content remains intentionally factual and project status remains explicit.

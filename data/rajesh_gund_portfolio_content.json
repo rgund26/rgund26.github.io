@@ -280,5 +280,78 @@
       "Analytical Instrumentation",
       "Bibliometric Analysis"
     ]
-  }
+  },
+  "site_pages": [
+    "",
+    "about/",
+    "experience/",
+    "publications/",
+    "projects/",
+    "projects/pest-trap-robot/",
+    "projects/ghg-sensor/",
+    "projects/earlier-work/"
+  ],
+  "experience": [
+    {
+      "dates": "Jan 2025 – Present",
+      "organization": "University of Tennessee, Knoxville",
+      "role": "PhD student · Graduate Research Assistant",
+      "location": "Knoxville, Tennessee",
+      "summary": "Developing robotic and sensing systems for agricultural applications.",
+      "contributions": [
+        "Research on the Autonomous Pest Trap Service Robot and a wireless CO₂ soil-respiration sensor.",
+        "Integration work spans mobile robotics, perception, sensor interfacing, CAD and embedded systems.",
+        "Graduate teaching assistance during Jan–Jul 2025 included laboratory setup and grading."
+      ]
+    },
+    {
+      "dates": "Jan 2024 – Oct 2024",
+      "organization": "CSIR–CMERI, Centre of Excellence for Farm Machinery",
+      "role": "Project Associate",
+      "location": "Ludhiana, India",
+      "summary": "Embedded programming, mechatronics and CAD for precision agriculture.",
+      "contributions": [
+        "Contributed to a digital cone penetrometer, variable-rate fertilizer system and AGV navigation work.",
+        "Field mapping using SoilOptix, GreenSeeker and a digital cone penetrometer.",
+        "Troubleshot sensor and program issues under the guidance of Dr. Pradeep Rajan."
+      ]
+    },
+    {
+      "dates": "Oct 2023 – Nov 2023",
+      "organization": "SKUAST-K",
+      "role": "Research & Development Intern",
+      "location": "Srinagar, India",
+      "summary": "A 45-day DST-SERB training program: Applications of IoT & Robotics in Agriculture.",
+      "contributions": [
+        "Hands-on work with Raspberry Pi, Arduino, sensor integration and data logging.",
+        "Explored agricultural IoT and robotics under Dr. Showkat Rasool."
+      ]
+    },
+    {
+      "dates": "Jul 2021 – Aug 2021",
+      "organization": "Barnstorm Agtech, Inc.",
+      "role": "Research & Development Intern",
+      "location": "Pune, India",
+      "summary": "Mechanical design work for an autonomous farm tractor.",
+      "contributions": [
+        "Designed a custom three-point linkage using SolidWorks.",
+        "Studied linkage forces, implement draft, traction force and tractor center of gravity."
+      ]
+    },
+    {
+      "dates": "Nov 2019 – Dec 2019",
+      "organization": "Indian Institute of Technology, Bombay",
+      "role": "Project Intern · Gasifier",
+      "location": "Mumbai, India",
+      "summary": "Low-calorific-value biomass gasification in a downdraft gasifier.",
+      "contributions": [
+        "Contributed to burner design and analytical instrumentation work."
+      ]
+    }
+  ],
+  "publications_verified": true,
+  "publications_verification_sources": [
+    "https://www.mdpi.com/2077-0472/15/17/1799",
+    "https://journalijecc.com/index.php/IJECC/article/view/2946"
+  ]
 }

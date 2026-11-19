@@ -26,3 +26,5 @@
 .story-cover figcaption{padding:8px 12px;background:#173d29;color:#fff;border:1px solid #173d29;border-radius:3px;font-family:var(--font-body);font-weight:700;line-height:1.35;box-shadow:0 2px 6px #0002;bottom:4%}
 .story-cover figcaption span{color:#fff;font-weight:700}
 @media(max-width:680px){.story-cover figcaption{padding:4px 7px;bottom:2%;font-size:.75rem;line-height:1.2}.story-cover figcaption span{font-size:.75rem}}
+
+.personal-opener{padding-top:38px}.personal-opener>.eyebrow{text-align:center}.personal-opener .opening-story{max-width:805px;margin:0 auto 24px;font-family:var(--font-display);font-size:clamp(1.25rem,2.1vw,1.75rem);line-height:1.6;color:var(--accent-green-text)}.personal-opener>.lead{max-width:805px;margin:0 auto;font-size:1.1rem}

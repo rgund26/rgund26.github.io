@@ -3,11 +3,11 @@
   if (!headings.length) return;
   const labels = {
     '/': ['About me', 'Featured projects', 'Engineering skills', 'Experience', 'Education', 'Publications', 'Contact'],
-    '/about/': ['My story', 'Skills in practice', 'Education', 'Teaching & communication', 'Contact'],
+    '/about/': ['Background', 'Skills in practice', 'Education', 'Teaching & communication', 'Contact'],
     '/experience/': ['University of Tennessee', 'CSIR–CMERI', 'SKUAST-K', 'Barnstorm Agtech', 'IIT Bombay', 'Industry training', 'Certifications', 'Contact'],
     '/publications/': ['Digital twin review', 'SRI nursery research', 'Research interests', 'Contact'],
     '/projects/': ['Pest trap service robot', 'CO₂ sensor', 'Rice transplanting', 'Precision agriculture', 'Tractor linkage', 'Litchi decorticator', 'Contact'],
-    '/projects/pest-trap-robot/': ['Photos & videos', 'The problem', 'My contribution', 'Perception pipeline', 'Progress & next steps', 'Related project'],
+    '/projects/pest-trap-robot/': ['Photos & videos', 'The problem', 'Engineering work', 'Perception pipeline', 'Progress & next steps', 'Related project'],
     '/projects/ghg-sensor/': ['Hardware iterations', 'KiCad & power', 'Device web app', 'Testing', 'Related project'],
     '/projects/earlier-work/': ['Rice transplanting', 'Precision agriculture', 'Tractor linkage', 'Litchi decorticator', 'Industry training', 'Engineering tools']
   };

@@ -2,7 +2,7 @@
   const headings = [...document.querySelectorAll('main h2')];
   if (!headings.length) return;
   const labels = {
-    '/': ['Featured projects', 'About me', 'Engineering skills', 'Experience', 'Education', 'Publications', 'Contact'],
+    '/': ['Overview', 'Featured projects', 'Engineering skills', 'Experience', 'Education', 'Publications', 'Contact'],
     '/about/': ['My story', 'Skills in practice', 'Education', 'Teaching & communication', 'Contact'],
     '/experience/': ['University of Tennessee', 'CSIR–CMERI', 'SKUAST-K', 'Barnstorm Agtech', 'IIT Bombay', 'Industry training', 'Certifications', 'Contact'],
     '/publications/': ['Digital twin review', 'SRI nursery research', 'Research interests', 'Contact'],
@@ -29,7 +29,7 @@
   const hero = document.querySelector('main h1');
   if (hero && !hero.id) hero.id = 'page-overview';
   topLink.href = '#' + (hero?.id || 'main');
-  topLink.textContent = 'Overview';
+  topLink.textContent = path === '/' ? 'About me' : 'Overview';
   top.append(topLink); list.append(top);
   const links = headings.map((heading, i) => {
     if (!heading.id) heading.id = 'topic-' + (i + 1);

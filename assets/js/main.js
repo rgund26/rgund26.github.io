@@ -17,8 +17,8 @@
     if (!button) return;
     opener = button;
     const image = button.querySelector('img');
-    modal.querySelector('img').src = image.src;
-    modal.querySelector('img').alt = image.alt;
+    modal.querySelector('img').src = button.dataset.fullSrc || image.src;
+    modal.querySelector('img').alt = button.dataset.fullAlt || image.alt;
     modal.querySelector('p').textContent = button.closest('figure').querySelector('figcaption')?.textContent || image.alt;
     modal.showModal();
   });
